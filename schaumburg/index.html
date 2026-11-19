@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Put your business in nearly 5,000 Schaumburg homes with The Schaumburg Spotlight from Doorstep Press."
+    />
+    <title>The Schaumburg Spotlight | Doorstep Press</title>
+    <link rel="preload" href="../fonts/plus-jakarta-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="/schaumburg/">
+          <span class="brand__name">Doorstep Press</span>
+          <span class="brand__sub">The Schaumburg Spotlight</span>
+        </a>
+        <a
+          class="btn btn--call"
+          data-config="phone"
+          data-keep-label="true"
+          href="#"
+          hidden
+        >
+          Call or text
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="band band--hero">
+        <div class="shell hero-stack">
+          <div class="hero__copy">
+            <p class="hero__issue" data-config="issueName">January 2027 issue</p>
+            <h1>Put your business in nearly 5,000 Schaumburg homes. The only one in your category.</h1>
+            <p class="hero__lead">
+              One oversized card. Sixteen local businesses. One spot per category.
+            </p>
+          </div>
+
+          <!-- Prefer assets/hero.jpg when present; falls back to card-front.svg -->
+          <figure class="hero__visual">
+            <img
+              class="hero__img"
+              src="../assets/hero.jpg"
+              width="1600"
+              height="1000"
+              alt="The Schaumburg Spotlight card"
+              onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='../assets/card-front.svg';this.classList.add('is-card-fallback');}else{this.classList.add('is-missing');}"
+            />
+          </figure>
+
+          <div class="facts" aria-label="Key facts">
+            <div class="fact">
+              <span class="fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg>
+              </span>
+              <strong>Nearly 5,000</strong>
+              <span>homes in 60193</span>
+            </div>
+            <div class="fact">
+              <span class="fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 9h3M13 9h3M8 13h3M13 13h3"/></svg>
+              </span>
+              <strong>16 businesses</strong>
+              <span>per card</span>
+            </div>
+            <div class="fact">
+              <span class="fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3l7 3v5c0 4.5-2.9 7.8-7 9-4.1-1.2-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+              </span>
+              <strong>1 per category</strong>
+              <span>no competitors on the card</span>
+            </div>
+            <div class="fact">
+              <span class="fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              </span>
+              <strong>9x12 full color</strong>
+              <span>heavy stock</span>
+            </div>
+          </div>
+
+          <p class="urgency">
+            Space closes <span data-config="spaceDeadline">December 19</span>. Categories go first come, first paid.
+          </p>
+
+          <div class="jump">
+            <a class="btn btn--primary" href="#plans">See plans and pay</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--ink" aria-label="Card concept">
+        <div class="shell card-concept reveal">
+          <div class="card-concept__copy">
+            <h2>One card. Sixteen businesses. Your category locked.</h2>
+            <p>
+              The Schaumburg Spotlight is a 9x12 full color card mailed via USPS EDDM.
+              Eight equal spots on each side. One business per category.
+            </p>
+          </div>
+          <div class="card-faces">
+            <figure class="card-face">
+              <img
+                src="../assets/card-front.svg"
+                width="1200"
+                height="900"
+                alt="Card front: eight equal ad spots with The Schaumburg Spotlight masthead and postal indicia"
+              />
+              <figcaption>Front</figcaption>
+            </figure>
+            <figure class="card-face">
+              <img
+                src="../assets/card-back.svg"
+                width="1200"
+                height="900"
+                alt="Card back: eight equal ad spots with Support Local Schaumburg band"
+              />
+              <figcaption>Back</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--plans" id="plans">
+        <div class="shell">
+          <div class="plans-head">
+            <h2>Choose your spots</h2>
+            <p class="plans-save">
+              Commit for six months and save $50 per spot, every issue.
+            </p>
+            <p class="plans-note">Max 4 spots per business. Pick once, then compare both options.</p>
+          </div>
+
+          <div
+            class="spot-picker"
+            role="radiogroup"
+            aria-label="Number of spots"
+          >
+            <button type="button" class="spot-picker__btn is-active" data-spots="1" role="radio" aria-checked="true">1</button>
+            <button type="button" class="spot-picker__btn" data-spots="2" role="radio" aria-checked="false">2</button>
+            <button type="button" class="spot-picker__btn" data-spots="3" role="radio" aria-checked="false">3</button>
+            <button type="button" class="spot-picker__btn" data-spots="4" role="radio" aria-checked="false">4</button>
+          </div>
+          <p class="spot-picker__label">
+            <span data-spots-label>1 spot</span> selected
+          </p>
+
+          <div class="plan-compare">
+            <article class="plan plan--featured">
+              <span class="plan__badge">Recommended</span>
+              <h3>Six month plan</h3>
+              <p class="plan__price" data-price="plan6">
+                $450<span class="price-unit">/issue</span>
+              </p>
+              <p class="plan__compare" data-compare="plan6">
+                $450 vs $500 single issue. Save $50 every issue, $300 over six months.
+              </p>
+              <p class="plan__perspot" data-perspot="plan6" hidden></p>
+              <p class="plan__billing">Billed monthly for six issues.</p>
+              <ul class="checklist">
+                <li>Category locked for six issues</li>
+                <li>Billed monthly</li>
+                <li>Change your ad between issues at no charge</li>
+                <li>Monthly scan and call report</li>
+              </ul>
+              <a class="btn btn--primary" data-pay="plan6" href="#">
+                Lock 1 spot for 6 months
+              </a>
+            </article>
+
+            <article class="plan plan--single">
+              <span class="plan__badge plan__badge--quiet">Single issue</span>
+              <h3>Single issue</h3>
+              <p class="plan__price" data-price="single">$500</p>
+              <p class="plan__meta" data-meta="single">Paid in full.</p>
+              <ul class="checklist checklist--muted">
+                <li>One issue only</li>
+                <li>Paid in full today</li>
+                <li>Same design and tracking included</li>
+              </ul>
+              <a class="btn btn--secondary" data-pay="single" href="#">
+                Pay for 1 spot
+              </a>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="band band--paper">
+        <div class="shell">
+          <h2 class="reveal">What's included</h2>
+          <div class="include-grid">
+            <article class="include reveal">
+              <span class="include__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3l7 3v5c0 4.5-2.9 7.8-7 9-4.1-1.2-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+              </span>
+              <h3>Category exclusivity</h3>
+              <p>You are the only business in your category on the card.</p>
+            </article>
+            <article class="include reveal">
+              <span class="include__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>
+              </span>
+              <h3>Design included</h3>
+              <p>
+                We build the ad from your logo, photos, and offer. You get a proof before print.
+              </p>
+            </article>
+            <article class="include reveal">
+              <span class="include__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 19V5h4l2 3h10v11H4z"/><path d="M8 19v-6h8v6"/></svg>
+              </span>
+              <h3>Tracking</h3>
+              <p>Your own QR code and offer code, plus a monthly report.</p>
+            </article>
+            <article class="include reveal">
+              <span class="include__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 7h16v10H4z"/><path d="M4 7l8 6 8-6"/></svg>
+              </span>
+              <h3>Proof of mailing</h3>
+              <p>USPS receipt, route map, and a printed copy of the card.</p>
+            </article>
+            <article class="include reveal">
+              <span class="include__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 9h8M8 13h5"/></svg>
+              </span>
+              <h3>Big format, read in hand</h3>
+              <p>9x12 full color on heavy stock. No envelope to throw away.</p>
+            </article>
+            <article class="include reveal">
+              <span class="include__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 21s-7-4.4-7-10a7 7 0 1 1 14 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+              </span>
+              <h3>Local and simple</h3>
+              <p>Published right here in Schaumburg. One person to call, no long contracts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--guarantee">
+        <div class="shell">
+          <aside class="guarantee reveal">
+            <div class="trust-row">
+              <span class="trust-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-2.9 7.8-7 9-4.1-1.2-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+                Full refund guarantee
+              </span>
+              <span class="trust-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 16l9 4 9-4"/></svg>
+                USPS EDDM mailing
+              </span>
+            </div>
+            <p class="guarantee__label">Guarantee</p>
+            <p>
+              Full refund if the card does not fill. If fewer than ten spots sell for this issue,
+              the card does not mail and you get every dollar back.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="band band--steps">
+        <div class="shell">
+          <h2 class="reveal">After you pay</h2>
+          <ol class="steps">
+            <li class="reveal">
+              <h3>Category held</h3>
+              <p>Confirmed same day.</p>
+            </li>
+            <li class="reveal">
+              <h3>Send logo and offer</h3>
+              <p>Logo, photos, and the offer you want on the card.</p>
+            </li>
+            <li class="reveal">
+              <h3>Approve your proof</h3>
+              <p>Nothing prints without your OK.</p>
+            </li>
+            <li class="reveal">
+              <h3>Card lands</h3>
+              <p>Then your proof pack and first report.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="band band--faq">
+        <div class="shell shell--narrow">
+          <h2 class="reveal">FAQ</h2>
+          <div class="faq">
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button" aria-expanded="false">
+                What if my category is already taken?
+              </button>
+              <div class="faq-a" hidden>
+                You are first in line for the next card. You pay nothing until your category is
+                confirmed.
+              </div>
+            </div>
+
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button" aria-expanded="false">
+                How is this different from Valpak?
+              </button>
+              <div class="faq-a" hidden>
+                One single card with 16 businesses. No competitors in your category. No envelope.
+              </div>
+            </div>
+
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button" aria-expanded="false">
+                Which homes get the card?
+              </button>
+              <div class="faq-a" hidden>
+                Every home on ten carrier routes in 60193. Nearly 5,000 homes.
+              </div>
+            </div>
+
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button" aria-expanded="false">
+                Can I cancel the six month plan?
+              </button>
+              <div class="faq-a" hidden>
+                Talk to us and we will work through it with you.
+              </div>
+            </div>
+
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button" aria-expanded="false">
+                When does it mail?
+              </button>
+              <div class="faq-a" hidden>
+                January. Space closes
+                <span data-config="spaceDeadline">December 19</span>
+                to allow design and proofing.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p class="site-footer__credit">
+          Doorstep Press publishes The Schaumburg Spotlight. A Stellogics Inc. company.
+        </p>
+        <div class="site-footer__links">
+          <a data-config="phone" href="#" hidden></a>
+          <a data-config="email" href="#" hidden></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="sticky-pay">
+      <a class="btn btn--primary" href="#plans">See plans and pay</a>
+    </div>
+
+    <script src="../config.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>

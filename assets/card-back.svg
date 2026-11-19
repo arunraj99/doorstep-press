@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="cardBackTitle">
+  <title id="cardBackTitle">The Schaumburg Spotlight card back</title>
+  <defs>
+    <style>
+      .spot { fill: #f3f1ec; stroke: #d9d5cd; stroke-width: 2; }
+      .cat { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 28px; font-weight: 700; fill: #3a3a40; }
+      .band { fill: #16161a; }
+      .support { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 30px; font-weight: 700; fill: #f7f5f1; }
+      .cta { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 18px; font-weight: 500; fill: #cfcbc4; }
+      .phone { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #f7f5f1; }
+      .qr { fill: #f7f5f1; stroke: #cfcbc4; stroke-width: 1.5; }
+      .qr-t { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #16161a; letter-spacing: 0.06em; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="#ffffff"/>
+
+  <!-- Top row: 4 spots -->
+  <rect class="spot" x="0" y="0" width="300" height="390"/>
+  <rect class="spot" x="300" y="0" width="300" height="390"/>
+  <rect class="spot" x="600" y="0" width="300" height="390"/>
+  <rect class="spot" x="900" y="0" width="300" height="390"/>
+
+  <text class="cat" x="150" y="205" text-anchor="middle">Auto Repair</text>
+  <text class="cat" x="450" y="205" text-anchor="middle">Insurance</text>
+  <text class="cat" x="750" y="205" text-anchor="middle">Chiropractor</text>
+  <text class="cat" x="1050" y="205" text-anchor="middle">Veterinarian</text>
+
+  <!-- Middle band -->
+  <rect class="band" x="0" y="390" width="1200" height="120"/>
+  <text class="support" x="28" y="448">Support Local Schaumburg</text>
+  <text class="cta" x="28" y="482">Want your business on the next card? One business per category.</text>
+
+  <text class="phone" x="820" y="440" text-anchor="middle">(XXX) XXX-XXXX</text>
+  <rect class="qr" x="960" y="408" width="72" height="72" rx="4"/>
+  <rect x="972" y="420" width="48" height="48" fill="none" stroke="#16161a" stroke-width="3"/>
+  <rect x="984" y="432" width="24" height="24" fill="#16161a"/>
+  <text class="qr-t" x="996" y="495" text-anchor="middle">QR</text>
+
+  <!-- Bottom row: 4 spots -->
+  <rect class="spot" x="0" y="510" width="300" height="390"/>
+  <rect class="spot" x="300" y="510" width="300" height="390"/>
+  <rect class="spot" x="600" y="510" width="300" height="390"/>
+  <rect class="spot" x="900" y="510" width="300" height="390"/>
+
+  <text class="cat" x="150" y="715" text-anchor="middle">Tree Service</text>
+  <text class="cat" x="450" y="715" text-anchor="middle">Real Estate</text>
+  <text class="cat" x="750" y="715" text-anchor="middle">Pest Control</text>
+  <text class="cat" x="1050" y="715" text-anchor="middle">Lawn Care</text>
+</svg>

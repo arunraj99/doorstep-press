@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="cardFrontTitle">
+  <title id="cardFrontTitle">The Schaumburg Spotlight card front</title>
+  <defs>
+    <style>
+      .spot { fill: #f3f1ec; stroke: #d9d5cd; stroke-width: 2; }
+      .spot-yours { fill: #f3e6d8; stroke: #b5652a; stroke-width: 3; }
+      .cat { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 28px; font-weight: 700; fill: #3a3a40; }
+      .yours { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 26px; font-weight: 700; fill: #b5652a; }
+      .band { fill: #16161a; }
+      .mast { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 36px; font-weight: 700; fill: #f7f5f1; }
+      .issue { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 22px; font-weight: 500; fill: #cfcbc4; }
+      .indicia { fill: #f7f5f1; stroke: #cfcbc4; stroke-width: 1.5; }
+      .indicia-t { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 11px; font-weight: 700; fill: #16161a; letter-spacing: 0.04em; }
+      .local { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: #f7f5f1; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="900" fill="#ffffff"/>
+
+  <!-- Top row: 4 spots -->
+  <rect class="spot" x="0" y="0" width="300" height="390"/>
+  <rect class="spot" x="300" y="0" width="300" height="390"/>
+  <rect class="spot-yours" x="600" y="0" width="300" height="390"/>
+  <rect class="spot" x="900" y="0" width="300" height="390"/>
+
+  <text class="cat" x="150" y="205" text-anchor="middle">Roofing</text>
+  <text class="cat" x="450" y="205" text-anchor="middle">HVAC</text>
+  <text class="yours" x="750" y="195" text-anchor="middle">Your business</text>
+  <text class="yours" x="750" y="228" text-anchor="middle">here</text>
+  <text class="cat" x="1050" y="205" text-anchor="middle">Windows</text>
+
+  <!-- Middle band -->
+  <rect class="band" x="0" y="390" width="1200" height="120"/>
+  <text class="mast" x="28" y="445">The Schaumburg Spotlight</text>
+  <text class="issue" x="28" y="480">January 2027</text>
+
+  <rect class="indicia" x="980" y="408" width="190" height="72" rx="2"/>
+  <text class="indicia-t" x="1075" y="428" text-anchor="middle">PRSRT STD</text>
+  <text class="indicia-t" x="1075" y="444" text-anchor="middle">ECRWSS</text>
+  <text class="indicia-t" x="1075" y="460" text-anchor="middle">U.S. POSTAGE PAID</text>
+  <text class="indicia-t" x="1075" y="476" text-anchor="middle">EDDM RETAIL</text>
+  <text class="local" x="1075" y="498" text-anchor="middle">Local Postal Customer</text>
+
+  <!-- Bottom row: 4 spots -->
+  <rect class="spot" x="0" y="510" width="300" height="390"/>
+  <rect class="spot" x="300" y="510" width="300" height="390"/>
+  <rect class="spot" x="600" y="510" width="300" height="390"/>
+  <rect class="spot" x="900" y="510" width="300" height="390"/>
+
+  <text class="cat" x="150" y="715" text-anchor="middle">Garage Doors</text>
+  <text class="cat" x="450" y="715" text-anchor="middle">Flooring</text>
+  <text class="cat" x="750" y="715" text-anchor="middle">Plumbing</text>
+  <text class="cat" x="1050" y="715" text-anchor="middle">Remodeling</text>
+</svg>

@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  command = "echo 'Static site, no build'"
+
+[[redirects]]
+  from = "/"
+  to = "/schaumburg/"
+  status = 302
+  force = true
