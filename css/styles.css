@@ -44,8 +44,8 @@
   /* Stellogics-aligned type scale (stepped up for this landing page) */
   --text-body: 16px;
   --text-small: 14px;
-  /* ~36px phone → ~54px desktop */
-  --text-h1: clamp(2.25rem, 1.55rem + 2.4vw, 3.375rem);
+  /* ~36px phone → ~52px desktop */
+  --text-h1: clamp(2.25rem, 1.6rem + 2.2vw, 3.25rem);
   --text-h2: clamp(1.85rem, 4.2vw, 2.55rem);
   --text-h3: clamp(1.15rem, 2vw, 1.4rem);
   --text-lead: clamp(1.05rem, 2vw, 1.2rem);
@@ -480,14 +480,14 @@ button:focus-visible {
   }
 
   .hero-stack {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr);
     grid-template-areas:
       "copy visual"
       "facts facts"
       "urgency urgency"
       "jump jump";
-    column-gap: 1.75rem;
-    row-gap: 0.75rem;
+    column-gap: 1.5rem;
+    row-gap: 0.7rem;
     align-items: center;
   }
 
