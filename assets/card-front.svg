@@ -32,7 +32,7 @@
   <!-- Middle band -->
   <rect class="band" x="0" y="390" width="1200" height="120"/>
   <text class="mast" x="28" y="445">The Schaumburg Spotlight</text>
-  <text class="issue" x="28" y="480">January 2027</text>
+  <text class="issue" x="28" y="480">Christmas 2026</text>
 
   <rect class="indicia" x="980" y="408" width="190" height="72" rx="2"/>
   <text class="indicia-t" x="1075" y="428" text-anchor="middle">PRSRT STD</text>

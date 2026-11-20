@@ -52,6 +52,7 @@
   setText("[data-config='spaceDeadline']", config.spaceDeadline);
 
   var phone = (config.phone || "").trim();
+  var phoneDisplay = (config.phoneDisplay || phone).trim();
   var email = (config.email || "").trim();
   var phoneDigits = phone.replace(/[^\d+]/g, "");
 
@@ -63,9 +64,9 @@
     el.hidden = false;
     if (el.tagName === "A") {
       el.href = "tel:" + phoneDigits;
-      if (!el.dataset.keepLabel) el.textContent = phone;
+      if (!el.dataset.keepLabel) el.textContent = phoneDisplay;
     } else {
-      el.textContent = phone;
+      el.textContent = phoneDisplay;
     }
   });
 

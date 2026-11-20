@@ -44,7 +44,7 @@
   /* Stellogics-aligned type scale (stepped up for this landing page) */
   --text-body: 16px;
   --text-small: 14px;
-  --text-h1: clamp(2.35rem, 7.2vw, 3.85rem);
+  --text-h1: clamp(2.7rem, 8vw, 4.35rem);
   --text-h2: clamp(1.85rem, 4.2vw, 2.55rem);
   --text-h3: clamp(1.15rem, 2vw, 1.4rem);
   --text-lead: clamp(1.05rem, 2vw, 1.2rem);
@@ -194,10 +194,17 @@ button:focus-visible {
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.12rem;
   min-width: 0;
   text-decoration: none;
-  color: inherit;
+  color: var(--color-ink);
+}
+
+.brand__logo {
+  display: block;
+  width: auto;
+  height: 28px;
+  color: var(--color-ink);
 }
 
 .brand__name {
@@ -213,6 +220,7 @@ button:focus-visible {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-left: 2.05rem;
 }
 
 /* Buttons */
@@ -331,10 +339,10 @@ button:focus-visible {
 .hero h1 {
   margin: 0;
   font-size: var(--text-h1);
-  line-height: 1.06;
-  letter-spacing: -0.04em;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
   font-weight: 700;
-  max-width: 15ch;
+  max-width: 14ch;
 }
 
 .hero__lead {
@@ -491,7 +499,12 @@ button:focus-visible {
   }
 
   .hero h1 {
-    max-width: 12ch;
+    max-width: 13ch;
+    line-height: 0.96;
+  }
+
+  .brand__logo {
+    height: 30px;
   }
 
   .jump .btn--primary {

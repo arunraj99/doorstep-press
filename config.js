@@ -2,16 +2,16 @@
  * Doorstep Press / The Schaumburg Spotlight
  * Edit this file only for contact info, issue details, and Stripe Payment Links.
  * Leave a Stripe URL empty to show that button as unavailable.
- * Auto-redeploy check: edits to this file on main trigger Netlify.
  *
  * Stripe success URL (set on each Payment Link):
  * https://doorsteppress.stellogics.ai/schaumburg/thanks/
  */
 window.DOORSTEP_CONFIG = {
-  phone: "",
-  email: "",
-  issueName: "January 2027 issue",
-  spaceDeadline: "December 19",
+  phone: "+16105698530",
+  phoneDisplay: "(610) 569-8530",
+  email: "arun@stellogics.ai",
+  issueName: "Christmas 2026 issue",
+  spaceDeadline: "soon",
   stripe: {
     plan6_1: "",
     plan6_2: "",
