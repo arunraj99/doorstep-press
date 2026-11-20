@@ -381,7 +381,7 @@ button:focus-visible {
 .fact {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: minmax(2.4em, auto) auto;
+  grid-template-rows: 2.4em auto;
   column-gap: 0.65rem;
   row-gap: 0.12rem;
   align-items: start;
@@ -408,11 +408,14 @@ button:focus-visible {
 }
 
 .fact strong {
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   font-size: clamp(1rem, 1.8vw, 1.12rem);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  min-height: 2.4em;
+  max-height: 2.4em;
 }
 
 .fact > span:not(.fact__icon) {
