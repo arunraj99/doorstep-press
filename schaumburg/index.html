@@ -46,16 +46,21 @@
             </p>
           </div>
 
-          <!-- Prefer assets/hero.jpg when present; falls back to card-front.svg -->
-          <!-- Swap src to ../assets/hero.jpg when the photo is ready -->
           <figure class="hero__visual">
             <img
-              class="hero__img is-card-fallback"
-              src="../assets/card-front.svg"
-              width="1200"
-              height="900"
-              alt="The Schaumburg Spotlight card"
+              class="hero__img"
+              src="../assets/card-front-sample.jpg"
+              srcset="../assets/card-front-sample-1200.jpg 1200w, ../assets/card-front-sample.jpg 2400w"
+              sizes="(max-width: 767.98px) calc(100vw - 2.2rem), (max-width: 899.98px) min(100vw - 2.2rem, 1120px), 38vw"
+              width="2400"
+              height="1800"
+              alt="Sample front of The Schaumburg Spotlight card showing local business ads"
+              loading="eager"
+              decoding="async"
             />
+            <figcaption class="card-sample-caption">
+              Sample card. Businesses shown are examples.
+            </figcaption>
           </figure>
 
           <div class="facts" aria-label="Key facts">
@@ -118,24 +123,49 @@
           </div>
           <div class="card-faces">
             <figure class="card-face">
-              <img
-                src="../assets/card-front.svg"
-                width="1200"
-                height="900"
-                alt="Card front: eight equal ad spots with The Schaumburg Spotlight masthead and postal indicia"
-              />
+              <button
+                type="button"
+                class="card-face__zoom"
+                data-lightbox="../assets/card-front-sample.jpg"
+                aria-label="View full size sample front of The Schaumburg Spotlight card"
+              >
+                <img
+                  src="../assets/card-front-sample.jpg"
+                  srcset="../assets/card-front-sample-1200.jpg 1200w, ../assets/card-front-sample.jpg 2400w"
+                  sizes="(max-width: 899.98px) calc(100vw - 2.2rem), min(540px, 44vw)"
+                  width="2400"
+                  height="1800"
+                  alt="Sample front of The Schaumburg Spotlight card showing local business ads"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
               <figcaption>Front</figcaption>
             </figure>
             <figure class="card-face">
-              <img
-                src="../assets/card-back.svg"
-                width="1200"
-                height="900"
-                alt="Card back: eight equal ad spots with Support Local Schaumburg band"
-              />
+              <button
+                type="button"
+                class="card-face__zoom"
+                data-lightbox="../assets/card-back-sample.jpg"
+                aria-label="View full size sample back of The Schaumburg Spotlight card"
+              >
+                <img
+                  src="../assets/card-back-sample.jpg"
+                  srcset="../assets/card-back-sample-1200.jpg 1200w, ../assets/card-back-sample.jpg 2400w"
+                  sizes="(max-width: 899.98px) calc(100vw - 2.2rem), min(540px, 44vw)"
+                  width="2400"
+                  height="1800"
+                  alt="Sample back of The Schaumburg Spotlight card"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
               <figcaption>Back</figcaption>
             </figure>
           </div>
+          <p class="card-sample-caption card-sample-caption--on-ink">
+            Sample card. Businesses shown are examples.
+          </p>
         </div>
       </section>
 
@@ -389,6 +419,16 @@
 
     <div class="sticky-pay">
       <a class="btn btn--primary" href="#plans">See plans and pay</a>
+    </div>
+
+    <div class="lightbox" id="card-lightbox" hidden>
+      <div class="lightbox__backdrop" data-lightbox-close tabindex="-1"></div>
+      <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Sample card preview">
+        <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close">
+          Close
+        </button>
+        <img class="lightbox__img" alt="" />
+      </div>
     </div>
 
     <script src="../config.js"></script>

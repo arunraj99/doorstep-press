@@ -267,6 +267,53 @@
     syncStickyPay();
   }
 
+  /* Sample card lightbox */
+  var lightbox = document.getElementById("card-lightbox");
+  var lightboxImg = lightbox && lightbox.querySelector(".lightbox__img");
+  var lightboxTriggers = document.querySelectorAll("[data-lightbox]");
+  var lightboxLastFocus = null;
+
+  function closeLightbox() {
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+    if (lightboxImg) {
+      lightboxImg.removeAttribute("src");
+      lightboxImg.alt = "";
+    }
+    if (lightboxLastFocus && typeof lightboxLastFocus.focus === "function") {
+      lightboxLastFocus.focus();
+    }
+  }
+
+  function openLightbox(src, alt) {
+    if (!lightbox || !lightboxImg || !src) return;
+    lightboxLastFocus = document.activeElement;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "Sample card";
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    var closeBtn = lightbox.querySelector(".lightbox__close");
+    if (closeBtn) closeBtn.focus();
+  }
+
+  lightboxTriggers.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var src = btn.getAttribute("data-lightbox");
+      var img = btn.querySelector("img");
+      openLightbox(src, img ? img.getAttribute("alt") : "");
+    });
+  });
+
+  if (lightbox) {
+    lightbox.querySelectorAll("[data-lightbox-close]").forEach(function (el) {
+      el.addEventListener("click", closeLightbox);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeLightbox();
+    });
+  }
+
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     document.querySelectorAll(".reveal").forEach(function (el) {
       el.classList.add("is-visible");
