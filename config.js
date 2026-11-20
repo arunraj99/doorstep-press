@@ -13,13 +13,13 @@ window.DOORSTEP_CONFIG = {
   issueName: "Christmas 2026 issue",
   spaceDeadline: "soon",
   stripe: {
-    plan6_1: "",
-    plan6_2: "",
-    plan6_3: "",
-    plan6_4: "",
-    single_1: "",
-    single_2: "",
-    single_3: "",
-    single_4: ""
+    plan6_1: "https://buy.stripe.com/test_8x2fZh17d8mb23beYvcwg04",
+    plan6_2: "https://buy.stripe.com/test_bJefZhg27eKzazH03Bcwg05",
+    plan6_3: "https://buy.stripe.com/test_14AfZh6rxdGv4bj4jRcwg06",
+    plan6_4: "https://buy.stripe.com/test_fZueVd0391XNbDL9Ebcwg07",
+    single_1: "https://buy.stripe.com/test_14AaEX17d6e37nv7w3cwg00",
+    single_2: "https://buy.stripe.com/test_eVq14n9DJcCrgY5aIfcwg01",
+    single_3: "https://buy.stripe.com/test_28E28r2bh59ZbDL3fNcwg02",
+    single_4: "https://buy.stripe.com/test_6oUfZhdTZauj7nv6rZcwg03"
   }
 };
