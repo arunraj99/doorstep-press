@@ -221,7 +221,7 @@
     });
   });
 
-  /* Sticky pay: show only after hero CTA leaves view, hide when pricing is in view */
+  /* Sticky pay: only after hero CTA scrolls past; hide when pricing is in view */
   var stickyPay = document.querySelector(".sticky-pay");
   var heroJump = document.querySelector(".jump");
   var plansSection = document.querySelector("#plans");
@@ -231,11 +231,11 @@
     plansSection &&
     "IntersectionObserver" in window
   ) {
-    var jumpInView = true;
+    var jumpScrolledPast = false;
     var plansInView = false;
 
     function syncStickyPay() {
-      var show = !jumpInView && !plansInView;
+      var show = jumpScrolledPast && !plansInView;
       stickyPay.classList.toggle("is-visible", show);
       stickyPay.setAttribute("aria-hidden", show ? "false" : "true");
     }
@@ -243,7 +243,9 @@
     var jumpIo = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
-          jumpInView = entry.isIntersecting;
+          /* Past = not intersecting and above the viewport (already scrolled through) */
+          jumpScrolledPast =
+            !entry.isIntersecting && entry.boundingClientRect.bottom < 0;
         });
         syncStickyPay();
       },
