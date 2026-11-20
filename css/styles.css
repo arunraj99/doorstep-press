@@ -962,10 +962,11 @@ button:focus-visible {
   color: var(--text-secondary);
 }
 
-/* FAQ */
+/* FAQ: full shell left edge; list stays narrower */
 .faq {
   display: grid;
   gap: 0.55rem;
+  max-width: var(--shell-narrow);
 }
 
 .faq-item {
@@ -1036,9 +1037,7 @@ button:focus-visible {
 }
 
 .site-footer-main {
-  max-width: var(--shell);
-  margin: 0 auto;
-  padding: 48px 28px 12px;
+  padding: 48px 0 12px;
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: 36px 32px;
@@ -1160,9 +1159,7 @@ button:focus-visible {
 .site-footer-legal {
   position: relative;
   z-index: 1;
-  max-width: var(--shell);
-  margin: 0 auto;
-  padding: 8px 28px 22px;
+  padding: 8px 0 22px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -1179,7 +1176,7 @@ button:focus-visible {
   .site-footer-main {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding: 28px 16px 4px;
+    padding: 28px 0 4px;
   }
 
   .site-footer-links a {
@@ -1195,7 +1192,7 @@ button:focus-visible {
 
   .site-footer-legal {
     justify-content: flex-start;
-    padding: 8px 16px 20px;
+    padding: 8px 0 20px;
   }
 
   .site-footer-legal-copy {

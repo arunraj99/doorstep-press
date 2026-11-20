@@ -31,7 +31,7 @@
   <text class="support" x="28" y="448">Support Local Schaumburg</text>
   <text class="cta" x="28" y="482">Want your business on the next card? One business per category.</text>
 
-  <text class="phone" x="820" y="440" text-anchor="middle">(XXX) XXX-XXXX</text>
+  <text class="phone" x="820" y="440" text-anchor="middle">(610) 569-8530</text>
   <rect class="qr" x="960" y="408" width="72" height="72" rx="4"/>
   <rect x="972" y="420" width="48" height="48" fill="none" stroke="#16161a" stroke-width="3"/>
   <rect x="984" y="432" width="24" height="24" fill="#16161a"/>
