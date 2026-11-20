@@ -962,11 +962,17 @@ button:focus-visible {
   color: var(--text-secondary);
 }
 
-/* FAQ: full shell left edge; list stays narrower */
+/* FAQ */
 .faq {
   display: grid;
   gap: 0.55rem;
-  max-width: var(--shell-narrow);
+}
+
+@media (min-width: 900px) {
+  .faq {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .faq-item {
