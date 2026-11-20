@@ -176,7 +176,9 @@
             <p class="plans-save">
               Commit for six months and save $50 per spot, every issue.
             </p>
-            <p class="plans-note">Max 4 spots per business. Pick once, then compare both options.</p>
+            <p class="plans-note">
+              Maximum 2 spots per business, so every card stays a true community card.
+            </p>
           </div>
 
           <div
@@ -184,10 +186,14 @@
             role="radiogroup"
             aria-label="Number of spots"
           >
-            <button type="button" class="spot-picker__btn is-active" data-spots="1" role="radio" aria-checked="true">1</button>
-            <button type="button" class="spot-picker__btn" data-spots="2" role="radio" aria-checked="false">2</button>
-            <button type="button" class="spot-picker__btn" data-spots="3" role="radio" aria-checked="false">3</button>
-            <button type="button" class="spot-picker__btn" data-spots="4" role="radio" aria-checked="false">4</button>
+            <button type="button" class="spot-picker__btn is-active" data-spots="1" role="radio" aria-checked="true">
+              <span class="spot-picker__num">1</span>
+              <span class="spot-picker__desc">spot</span>
+            </button>
+            <button type="button" class="spot-picker__btn" data-spots="2" role="radio" aria-checked="false">
+              <span class="spot-picker__num">2</span>
+              <span class="spot-picker__desc">spots, double size ad</span>
+            </button>
           </div>
           <p class="spot-picker__label">
             <span data-spots-label>1 spot</span> selected

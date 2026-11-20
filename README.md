@@ -22,9 +22,9 @@ All editable values live in `config.js`:
 - `email`
 - `issueName`
 - `spaceDeadline`
-- Stripe Payment Links:
-  - `stripe.plan6_1` / `plan6_2` / `plan6_3` / `plan6_4`
-  - `stripe.single_1` / `single_2` / `single_3` / `single_4`
+- Stripe Payment Links (max 2 spots per business):
+  - `stripe.plan6_1` / `plan6_2`
+  - `stripe.single_1` / `single_2`
 
 Empty Stripe URLs show as unavailable buttons. Empty phone/email hide those links.
 

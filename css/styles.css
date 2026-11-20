@@ -762,13 +762,18 @@ button:focus-visible {
 
 .spot-picker {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
-  max-width: 28rem;
+  max-width: 22rem;
 }
 
 .spot-picker__btn {
-  min-height: 52px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.15rem;
+  min-height: 64px;
+  padding: 0.65rem 0.7rem;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--color-white);
@@ -779,6 +784,24 @@ button:focus-visible {
   color: var(--color-ink);
   cursor: pointer;
   transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.spot-picker__num {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.spot-picker__desc {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.spot-picker__btn.is-active .spot-picker__desc {
+  color: rgba(247, 245, 241, 0.78);
 }
 
 .spot-picker__btn:hover {

@@ -18,22 +18,6 @@
         perSpot: "$400/spot"
       },
       single: { total: 900, meta: "$450/spot, save $100. Paid in full." }
-    },
-    3: {
-      plan6: {
-        total: 1150,
-        compare: "$1,150 vs $1,300. Save $150 every issue, $900 over six months.",
-        perSpot: "$383/spot"
-      },
-      single: { total: 1300, meta: "$433/spot, save $200. Paid in full." }
-    },
-    4: {
-      plan6: {
-        total: 1450,
-        compare: "$1,450 vs $1,650. Save $200 every issue, $1,200 over six months.",
-        perSpot: "$363/spot"
-      },
-      single: { total: 1650, meta: "$413/spot, save $350. Paid in full." }
     }
   };
 
@@ -146,7 +130,8 @@
     var spotLabels = document.querySelectorAll("[data-spots-label]");
 
     spotLabels.forEach(function (el) {
-      el.textContent = spots === 1 ? "1 spot" : spots + " spots";
+      el.textContent =
+        spots === 1 ? "1 spot" : "2 spots, double size ad";
     });
 
     if (plan6Price) {
@@ -177,7 +162,9 @@
       bindPayButton(
         plan6Btn,
         "plan6_" + spots,
-        "Lock " + (spots === 1 ? "1 spot" : spots + " spots") + " for 6 months",
+        spots === 1
+          ? "Lock 1 spot for 6 months"
+          : "Lock 2 spots for 6 months",
         spots,
         "six month plan"
       );
@@ -186,7 +173,7 @@
       bindPayButton(
         singleBtn,
         "single_" + spots,
-        "Pay for " + (spots === 1 ? "1 spot" : spots + " spots"),
+        spots === 1 ? "Pay for 1 spot" : "Pay for 2 spots",
         spots,
         "single issue"
       );
