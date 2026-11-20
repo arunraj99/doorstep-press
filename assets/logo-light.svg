@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40" role="img" aria-labelledby="logoLightTitle">
+  <title id="logoLightTitle">Doorstep Press</title>
+  <!-- Light mark for dark backgrounds -->
+  <g fill="#F7F5F1">
+    <rect x="1" y="2" width="30" height="36" rx="3"/>
+    <path fill="#16161A" d="M6 7h20v26H6z"/>
+    <rect x="9" y="12" width="9" height="13" rx="1" fill="#F7F5F1"/>
+    <circle cx="23" cy="24" r="1.6" fill="#F7F5F1"/>
+    <rect x="1" y="34" width="30" height="4" rx="1"/>
+  </g>
+</svg>

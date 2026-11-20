@@ -63,29 +63,37 @@
               <span class="fact__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/></svg>
               </span>
-              <strong>Nearly 5,000</strong>
-              <span>homes in 60193</span>
+              <div class="fact__text">
+                <strong>Nearly 5,000</strong>
+                <span>homes in 60193</span>
+              </div>
             </div>
             <div class="fact">
               <span class="fact__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M8 9h3M13 9h3M8 13h3M13 13h3"/></svg>
               </span>
-              <strong>16 businesses</strong>
-              <span>per card</span>
+              <div class="fact__text">
+                <strong>16 businesses</strong>
+                <span>per card</span>
+              </div>
             </div>
             <div class="fact">
               <span class="fact__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3l7 3v5c0 4.5-2.9 7.8-7 9-4.1-1.2-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
               </span>
-              <strong>1 per category</strong>
-              <span>no competitors on the card</span>
+              <div class="fact__text">
+                <strong>1 per category</strong>
+                <span>no competitors on the card</span>
+              </div>
             </div>
             <div class="fact">
               <span class="fact__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
               </span>
-              <strong>9x12 full color</strong>
-              <span>heavy stock</span>
+              <div class="fact__text">
+                <strong>9x12 full color</strong>
+                <span>heavy stock</span>
+              </div>
             </div>
           </div>
 
@@ -350,14 +358,32 @@
     </main>
 
     <footer class="site-footer">
-      <div class="shell">
-        <p class="site-footer__credit">
-          Doorstep Press publishes The Schaumburg Spotlight. A Stellogics Inc. company.
-        </p>
-        <div class="site-footer__links">
-          <a data-config="phone" href="#" hidden></a>
-          <a data-config="email" href="#" hidden></a>
+      <div class="site-footer-main">
+        <div class="site-footer-col site-footer-brand">
+          <a class="site-footer-logo-link" href="/schaumburg/" aria-label="Doorstep Press">
+            <img class="site-footer-logo" src="../assets/logo-light.svg" width="32" height="40" alt="" />
+            <span class="site-footer-logo-name">Doorstep Press</span>
+          </a>
+          <p class="site-footer-credit">
+            Doorstep Press publishes The Schaumburg Spotlight. A Stellogics Inc. company.
+          </p>
         </div>
+        <nav class="site-footer-col" aria-label="Contact">
+          <h2 class="site-footer-heading">Contact</h2>
+          <ul class="site-footer-links">
+            <li><a data-config="phone" href="#" hidden></a></li>
+            <li><a data-config="email" href="#" hidden></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer-wordmark-wrap" aria-hidden="true">
+        <p class="site-footer-wordmark">Doorstep</p>
+        <div class="site-footer-wordmark-fade"></div>
+      </div>
+
+      <div class="site-footer-legal">
+        <p class="site-footer-legal-copy">© 2026 Stellogics Inc.</p>
       </div>
     </footer>
 
