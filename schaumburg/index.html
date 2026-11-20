@@ -20,7 +20,7 @@
           <img class="brand__logo" src="../assets/logo.svg" width="32" height="40" alt="" />
           <span class="brand__text">
             <span class="brand__name">Doorstep Press</span>
-            <span class="brand__sub">The Schaumburg Spotlight</span>
+            <span class="brand__sub">Doorstep Press by Stellogics</span>
           </span>
         </a>
         <a
@@ -47,14 +47,14 @@
           </div>
 
           <!-- Prefer assets/hero.jpg when present; falls back to card-front.svg -->
+          <!-- Swap src to ../assets/hero.jpg when the photo is ready -->
           <figure class="hero__visual">
             <img
-              class="hero__img"
-              src="../assets/hero.jpg"
-              width="1600"
-              height="1000"
+              class="hero__img is-card-fallback"
+              src="../assets/card-front.svg"
+              width="1200"
+              height="900"
               alt="The Schaumburg Spotlight card"
-              onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='../assets/card-front.svg';this.classList.add('is-card-fallback');}else{this.classList.add('is-missing');}"
             />
           </figure>
 

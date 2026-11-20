@@ -339,24 +339,25 @@ button:focus-visible {
   min-width: 0;
 }
 
+/* Mobile order: copy → image → facts → deadline → CTA */
 .hero__copy {
   order: 1;
   min-width: 0;
 }
 
-.facts {
+.hero__visual {
   order: 2;
 }
 
-.urgency {
+.facts {
   order: 3;
 }
 
-.jump {
+.urgency {
   order: 4;
 }
 
-.hero__visual {
+.jump {
   order: 5;
 }
 
@@ -376,6 +377,34 @@ button:focus-visible {
   letter-spacing: -0.02em;
   font-weight: 700;
   max-width: none;
+}
+
+@media (max-width: 767.98px) {
+  .hero__copy h1 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .hero__visual {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
+    justify-self: stretch;
+    overflow: hidden;
+  }
+
+  .hero__img,
+  .hero__img.is-card-fallback {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+    object-fit: contain;
+    object-position: center;
+  }
 }
 
 .hero__lead {
@@ -1212,7 +1241,7 @@ button:focus-visible {
   padding-bottom: 2.5rem;
 }
 
-/* Sticky mobile pay */
+/* Sticky mobile pay: hidden until hero CTA scrolls away */
 .sticky-pay {
   position: fixed;
   left: 0;
@@ -1224,17 +1253,31 @@ button:focus-visible {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--border);
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: transform 200ms var(--ease), opacity 200ms var(--ease), visibility 200ms;
+}
+
+.sticky-pay.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .sticky-pay .btn {
   width: 100%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .sticky-pay {
     display: none;
   }
+}
 
+@media (min-width: 900px) {
   .site-footer {
     padding-bottom: 0;
   }

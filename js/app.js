@@ -221,6 +221,50 @@
     });
   });
 
+  /* Sticky pay: show only after hero CTA leaves view, hide when pricing is in view */
+  var stickyPay = document.querySelector(".sticky-pay");
+  var heroJump = document.querySelector(".jump");
+  var plansSection = document.querySelector("#plans");
+  if (
+    stickyPay &&
+    heroJump &&
+    plansSection &&
+    "IntersectionObserver" in window
+  ) {
+    var jumpInView = true;
+    var plansInView = false;
+
+    function syncStickyPay() {
+      var show = !jumpInView && !plansInView;
+      stickyPay.classList.toggle("is-visible", show);
+      stickyPay.setAttribute("aria-hidden", show ? "false" : "true");
+    }
+
+    var jumpIo = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          jumpInView = entry.isIntersecting;
+        });
+        syncStickyPay();
+      },
+      { threshold: 0, rootMargin: "0px" }
+    );
+
+    var plansIo = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          plansInView = entry.isIntersecting;
+        });
+        syncStickyPay();
+      },
+      { threshold: 0.12, rootMargin: "0px" }
+    );
+
+    jumpIo.observe(heroJump);
+    plansIo.observe(plansSection);
+    syncStickyPay();
+  }
+
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     document.querySelectorAll(".reveal").forEach(function (el) {
       el.classList.add("is-visible");
