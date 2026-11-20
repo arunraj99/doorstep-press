@@ -1,0 +1,17 @@
+name: Netlify deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify production build
+        env:
+          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "NETLIFY_BUILD_HOOK secret missing" >&2
+            exit 1
+          fi
+          curl -fsS -X POST -d {} "$HOOK"
