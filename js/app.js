@@ -36,9 +36,20 @@
   setText("[data-config='spaceDeadline']", config.spaceDeadline);
 
   var phone = (config.phone || "").trim();
-  var phoneDisplay = (config.phoneDisplay || phone).trim();
   var email = (config.email || "").trim();
   var phoneDigits = phone.replace(/[^\d+]/g, "");
+  /* Build display with ASCII hyphen-minus only (never en/em dash) */
+  var phoneDisplay = (config.phoneDisplay || phone)
+    .trim()
+    .replace(/[\u2010\u2011\u2012\u2013\u2014\u2212]/g, "-");
+  (function () {
+    var d = phoneDigits.replace(/\D/g, "");
+    if (d.length === 11 && d.charAt(0) === "1") d = d.slice(1);
+    if (d.length === 10) {
+      phoneDisplay =
+        "(" + d.slice(0, 3) + ") " + d.slice(3, 6) + "-" + d.slice(6);
+    }
+  })();
 
   document.querySelectorAll("[data-config='phone']").forEach(function (el) {
     if (!phone) {

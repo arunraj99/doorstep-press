@@ -1322,13 +1322,18 @@ button:focus-visible {
 .site-footer-main {
   padding: 48px 0 12px;
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr) minmax(0, 0.9fr);
-  gap: 36px 32px;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px 48px;
   align-items: start;
 }
 
 .site-footer-col {
   min-width: 0;
+  align-self: start;
+}
+
+.site-footer-brand {
+  max-width: 420px;
 }
 
 .site-footer-logo-link {
@@ -1337,13 +1342,15 @@ button:focus-visible {
   gap: 0.65rem;
   text-decoration: none;
   color: var(--sf-paper);
-  margin-bottom: 0.85rem;
+  margin: 0 0 0.75rem;
+  min-height: 36px;
 }
 
 .site-footer-logo {
   display: block;
   height: 36px;
   width: auto;
+  flex-shrink: 0;
 }
 
 .site-footer-logo-name {
@@ -1355,22 +1362,29 @@ button:focus-visible {
 
 .site-footer-credit {
   margin: 0;
-  max-width: 36ch;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   font-size: 14px;
   line-height: 1.45;
   font-weight: 500;
   color: rgba(247, 245, 241, 0.78);
+  white-space: normal;
 }
 
-@media (min-width: 900px) {
-  .site-footer-credit {
-    max-width: none;
-    white-space: nowrap;
-  }
+.site-footer-credit__line,
+.site-footer-credit__muted {
+  display: block;
+}
+
+.site-footer-credit__muted {
+  color: rgba(247, 245, 241, 0.52);
 }
 
 .site-footer h2.site-footer-heading {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
+  padding-top: 0.35rem; /* optically align with brand wordmark */
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1396,6 +1410,8 @@ button:focus-visible {
   line-height: 1.4;
   font-weight: 500;
   transition: color 0.2s ease;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
 }
 
 .site-footer-links a:hover {
