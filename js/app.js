@@ -51,6 +51,24 @@
     }
   })();
 
+  function setPhoneLabel(el) {
+    /* Split on ASCII hyphen so we can shorten the glyph visually in CSS */
+    if (el.dataset.keepLabel) return;
+    if (phoneDisplay.indexOf("-") === -1) {
+      el.textContent = phoneDisplay;
+      return;
+    }
+    var parts = phoneDisplay.split("-");
+    el.textContent = "";
+    el.appendChild(document.createTextNode(parts[0]));
+    var hyphen = document.createElement("span");
+    hyphen.className = "phone-hyphen";
+    hyphen.setAttribute("aria-hidden", "true");
+    hyphen.textContent = "-";
+    el.appendChild(hyphen);
+    el.appendChild(document.createTextNode(parts.slice(1).join("-")));
+  }
+
   document.querySelectorAll("[data-config='phone']").forEach(function (el) {
     if (!phone) {
       el.hidden = true;
@@ -59,9 +77,9 @@
     el.hidden = false;
     if (el.tagName === "A") {
       el.href = "tel:" + phoneDigits;
-      if (!el.dataset.keepLabel) el.textContent = phoneDisplay;
+      setPhoneLabel(el);
     } else {
-      el.textContent = phoneDisplay;
+      setPhoneLabel(el);
     }
   });
 

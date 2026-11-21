@@ -1414,6 +1414,15 @@ button:focus-visible {
   font-feature-settings: "liga" 0, "calt" 0;
 }
 
+/* Plus Jakarta draws U+002D long; keep ASCII hyphen but shorten the glyph */
+.phone-hyphen {
+  display: inline-block;
+  transform: scaleX(0.62);
+  transform-origin: center;
+  margin: 0 -0.06em;
+  font-weight: 500;
+}
+
 .site-footer-links a:hover {
   color: var(--sf-paper);
 }
