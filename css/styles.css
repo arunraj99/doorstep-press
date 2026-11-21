@@ -1384,7 +1384,7 @@ button:focus-visible {
 
 .site-footer h2.site-footer-heading {
   margin: 0 0 14px;
-  padding-top: 0.35rem; /* optically align with brand wordmark */
+  padding-top: 0;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1392,6 +1392,11 @@ button:focus-visible {
   line-height: 1.3;
   max-width: none;
   color: rgba(247, 245, 241, 0.78);
+}
+
+/* Match CONTACT/LEGAL heading cap-height to brand wordmark row */
+.site-footer-col:not(.site-footer-brand) {
+  padding-top: 0.55rem;
 }
 
 .site-footer-links {
